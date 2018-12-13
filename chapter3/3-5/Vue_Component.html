@@ -12,10 +12,18 @@
 <script src="https://cdn.jsdelivr.net/npm/vue"></script>
 <script>
   Vue.component('bustree-component',{
-    template: '<div>전역 컴포넌트 </div>'
+    template: '<div>전역 컴포넌트</div>'
   })
+  var cmp =
+    {
+      template: '<div>지역 컴포넌트 </div>'
+    }
   new Vue({
     el: '#app',
+    components :
+      {
+        'bustree-component' : cmp
+      }
   })
 </script>
 </body>
